@@ -22,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-2^jomw#gh_3thre)lj6&&x58@9)r@8kl&r-7$742qy97*z0*4$'
+SECRET_KEY = security_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [allowe_host]
 
 
 # Application definition
@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'chat.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 # Your NeonDB connection string
-DATABASE_URL = "postgresql://neondb_owner:nv2wkNLiG5Ah@ep-rapid-cherry-a1mb9hyf.ap-southeast-1.aws.neon.tech/neondb?sslmode=require"
+DATABASE_URL = database_url
 
 # Parse the database URL
 url = urlparse(DATABASE_URL)
